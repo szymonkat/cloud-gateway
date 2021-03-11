@@ -1,0 +1,17 @@
+server:
+  port: 8052
+eureka:
+  client:
+    serviceUrl:
+      defaultZone=http://localhost:8761/eureka/:
+
+spring:
+  application:
+    name: gateway
+  profiles:
+    active: production
+  cloud:
+    discovery:
+      locator:
+        enabled: true
+        lowerCaseServiceId: true
